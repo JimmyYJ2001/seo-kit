@@ -1,0 +1,12 @@
+{
+  "name": "seo-kit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Shared SEO rules for every site the SEO Hub manages.",
+  "exports": { ".": "./src/index.ts" },
+  "files": ["src"],
+  "scripts": {
+    "test": "node --test test/*.test.ts"
+  }
+}

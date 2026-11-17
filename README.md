@@ -8,7 +8,7 @@ The SEO rules every site in the SEO Hub follows, written as plain TypeScript fun
 npm install github:JimmyYJ2001/seo-kit#v0.1.1
 ```
 
-The package ships compiled JS plus type definitions in `dist/`, which is committed, so installing never runs a build. Node refuses to strip types from inside `node_modules`, which is why it doesn't ship raw `.ts`. After changing `src/`, run `npm run build` and commit `dist/` with it; CI fails if they differ. A server that builds a site needs read access to this private repo, through a deploy key or a token.
+The package ships compiled JS plus type definitions in `dist/`, which is committed, so installing never runs a build. Node refuses to strip types from inside `node_modules`, which is why it doesn't ship raw `.ts`. After changing `src/`, run `npm run build` and commit `dist/` with it; CI fails if they differ. The repo is public, so installs need no key or token.
 
 ## What it enforces
 

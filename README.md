@@ -5,10 +5,10 @@ The SEO rules every site in the SEO Hub follows, written as plain TypeScript fun
 ## Install
 
 ```bash
-npm install github:JimmyYJ2001/seo-kit#v0.1.0
+npm install github:JimmyYJ2001/seo-kit#v0.1.1
 ```
 
-The package ships TypeScript source. Next.js sites add `transpilePackages: ["seo-kit"]` to `next.config.ts`. A server that builds the site needs read access to this private repo, through a deploy key or a token.
+The package ships compiled JS plus type definitions in `dist/`, which is committed, so installing never runs a build. Node refuses to strip types from inside `node_modules`, which is why it doesn't ship raw `.ts`. After changing `src/`, run `npm run build` and commit `dist/` with it; CI fails if they differ. A server that builds a site needs read access to this private repo, through a deploy key or a token.
 
 ## What it enforces
 

@@ -7,4 +7,7 @@ jobs:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
         with: { node-version: 24 }
+      - run: npm ci
       - run: npm test
+      # dist/ is committed: it must match src/.
+      - run: npm run build && git diff --exit-code dist
